@@ -44,9 +44,26 @@
 
 <link rel="stylesheet" href="https://reportes.epsa.services/assets/css/reportes.css?1">
 <!-- END Stylesheets -->
-<script>var cordova = []; var StatusBar = [];</script>
-<script src="cordova.js"></script>
+
 <script src="assets/js/jquery.min.js"></script>
+<script src="cordova.js"></script>
+
+<link type="text/css" rel="stylesheet" href="assets/js/lightgallery/css/lightgallery.css" />
+<script src="assets/js/lightgallery/js/lightgallery.js"></script>
+<script src="assets/js/lightgallery/js/jquery.mousewheel.min.js"></script>
+<script src="assets/js/lightgallery/js/lg-thumbnail.js"></script>
+<script src="assets/js/lightgallery/js/lg-fullscreen.js"></script>
+<script src="assets/js/lightgallery/js/lg-zoom.js"></script>
+<script src="assets/js/lightgallery/js/lg-autoplay.js"></script>
+<script src="assets/js/lightgallery/js/lg-video.js"></script>
+<script src="assets/js/lightgallery/js/lg-pager.js"></script>
+
+<script src="assets/js/stitch/stitch.js"></script>
+<script src="assets/js/SQLitePlugin.js"></script>
+<script src="assets/js/pouchdb-7.0.0.min.js"></script>
+<script src="assets/js/pouchdb.find.min.js"></script>
+<script src="assets/js/pouchdb.websql.min.js"></script>
+
 <script src="https://maps.googleapis.com/maps/api/js?&region=mx&language=es&lang=es&libraries=places,geometry,visualization,drawing&key=AIzaSyA9rZZZWbeR2OWpsx91HnLLWfTi-pNXOAA"></script>
 
 <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
@@ -54,6 +71,7 @@
 <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-messaging.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-storage.js"></script>
 <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+<script type="text/javascript" src="assets/js/index.js"></script>
 
 </head>
 <body>
@@ -204,7 +222,13 @@ Adding .sidebar-mini-visible to an element will show it only when the sidebar is
 </div>
 <!-- END Page Container -->
 
+<script src="assets/js/codebase.core.min.js"></script>
+<script src="assets/js/codebase.app.min.js"></script>
+
+<script type="text/javascript" src="assets/js/jquery.geocomplete.min.js"></script>
+
 <script type="text/javascript" charset="ISO-8859-1">
+if ( typeof device == 'undefined'){ var device = {}; }
 var app = {
 initialize: function(){ this.bindEvents(); },
 bindEvents: function(){ document.addEventListener('deviceready', this.onDeviceReady, false); },
@@ -228,9 +252,9 @@ var User_Lat = window.localStorage.getItem("User_Lat");
 var User_Lon = window.localStorage.getItem("User_Lon");
 var geo_aprox = window.localStorage.getItem("geo_aprox");
 $.ajaxSetup({ async:true, cache: true });
-/* $.getScript(window.url_server+'/movil/api.get_script.php?id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device='+JSON.stringify(device) + '&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url='+JSON.stringify(handle)+'&is_app=1', function(){
+$.getScript(window.url_server+'/assets/js/header_web.php?is_app=1&id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device='+JSON.stringify(device) + '&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url='+JSON.stringify(handle)+'&is_app=1', function(){
 $(".ajax-content").html("<div class='main-content'><div align='center'><i class='fa fa-cog fa-spin'></i></div></div>");
-}); */
+});
 
 $(".ajax-content").ajaxError(function( e, jqxhr, settings, exception ) {
 $(this).prepend("No se pudo enlazar con el servidor.<br>" + e + "<br>"+jqxhr);
@@ -260,22 +284,22 @@ document.addEventListener("offline", onOffline, false);
 function ActivateOnline(){ window.onOnline(); }
 </script>
 
-<script src="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/codebase.core.min.js"></script>
-<script src="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/codebase.app.min.js?0"></script>
-
-<script type="text/javascript" src="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/jquery.geocomplete.min.js"></script>
-<script src="https://reportes.epsa.services/assets/js/header_web.php?is_app=1"></script>
+<!-- <script src="https://reportes.epsa.services/assets/js/header_web.php?is_app=1"></script> -->
+<!-- <script src="https://reportes.epsa.services/assets/js/app.ajax.php?is_app=1"></script> -->
 
 <script src="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 <script src="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
-<script src="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/core/jquery-scrollLock.min.js"></script>
-<script src="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/core/jquery.appear.min.js"></script>
-<script src="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/core/jquery.countTo.min.js"></script>
-<script src="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/core/js.cookie.min.js"></script>
+<script src="assets/js/core/jquery-scrollLock.min.js"></script>
+<script src="assets/js/core/jquery.appear.min.js"></script>
+<script src="assets/js/core/jquery.countTo.min.js"></script>
+<script src="assets/js/core/js.cookie.min.js"></script>
 <script src="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/pages/be_ui_icons.min.js"></script>
 <script src="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script>
+$.getScript(window.url_server+'/assets/js/app.ajax.php?is_app=1&id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device='+JSON.stringify(device) + '&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url='+JSON.stringify(handle)+'&is_app=1', function(){
 
-<script src="https://reportes.epsa.services/assets/js/app.ajax.php?is_app=1"></script>
+});
+</script>
 
 </body>
 </html>
