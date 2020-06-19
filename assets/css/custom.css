@@ -1,0 +1,43 @@
+
+.bg-content-header { background-color: #ffffff !important; text-align: left; }
+
+.content-header { padding: 0; height: 68px; }
+
+.content-header-item img { max-height: 50px; margin-top: 10px; margin-left: 5px; }
+
+select.form-control:not([size]):not([multiple]) { height: 34px; }
+
+#page-container.page-header-inverse #page-header { color: #292f72; background-color: #FFFFFF; }
+
+a .text-title_app { color: #292f72 !important; font-size: 2.0rem!important; }
+
+.no_margin{ margin-left: 0px !important; }
+
+.row_custom { margin-right: 0px; margin-left: 0px; }
+
+@media (min-width: 768px) {
+.content-heading { margin-bottom: 25px; padding-top: 10px; }
+}
+
+.block-content_il .block-content { padding: 10px 10px 10px 10px; }
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+height: 22px;
+line-height: 22px;
+color: #000 !important;
+}
+
+.select2-container .select2-selection--single { height: 34px !important; }
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+color: #444; line-height: 33px !important; }
+
+.select2-container--default .select2-selection--single .select2-selection__arrow { height: 32px; }
+
+.tabla_fs1 { font-size: 12px; }
+.tabla_fs2 { font-size: 13px; }
+.tabla_fs3 { font-size: 14px; }
+
+.table_center { text-align: center }
+.table_center th { text-align: center }
+.table_center td { text-align: center }
+
