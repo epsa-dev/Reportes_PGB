@@ -2,13 +2,13 @@
 
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="reportes.epsa.services" version="0.0.1">
-<name>App Reportes</name>
-<description>reportes.epsa.services</description>
-<author href="https://www.epsa.services" email="soporte@epsa.services">EPSA Services</author>
+<name>EPSA 2.0</name>
+<description>app.epsa.services</description>
+<author href="http://app.epsa.services/" email="soporte@epsa.services">EPSA Services</author>
 
-<preference name="android-minSdkVersion" value="18"/>
+<preference name="android-minSdkVersion" value="21"/>
 <preference name="android-targetSdkVersion" value="28" />
-
+<!-- https://build.phonegap.com/current-support -->
 <preference name="phonegap-version" value="cli-7.1.0" />
 <preference name="android-build-tool" value="gradle" />
 
@@ -50,6 +50,7 @@
 
 <plugin name="cordova-plugin-file-transfer" spec="~1.7.1" />
 <plugin name="cordova-plugin-file" source="npm" spec="~5.0.0" />
+<preference name="AndroidPersistentFileLocation" value="Compatibility" />
 
 <plugin name="cordova-plugin-geolocation" />
 <plugin name="cordova-plugin-inappbrowser" />
@@ -61,6 +62,7 @@
 <plugin name="cordova-plugin-vibration"/>
 <plugin name="cordova-plugin-android-permissions"/>
 <plugin name="cordova-plugin-imei"/>
+<plugin name="hazems-cordova-plugin-sms"/>
 
 <plugin name="cordova-plugin-geolocation">
 <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="Posicionamiento en el Mapa" />
@@ -68,19 +70,19 @@
 
 <gap:plugin name="cordova-plugin-x-toast" source="npm" />
 <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
-<param name="URL_SCHEME" value="epsa" />
+<param name="URL_SCHEME" value="reportes" />
 </gap:plugin>
 
 <!-- plugin name="cordova-plugin-firebase-messaging" / -->
 <!-- <plugin name="phonegap-plugin-push" spec="~2.0.0"(ok) spec="~2.2.3"(bad) source="npm"> spec="~1.4.5" spec="~2.0.0" -->
-<plugin name="phonegap-plugin-push" source="npm" >
+<plugin name="phonegap-plugin-push" source="npm" spec="2.2.3">
 <param name="SENDER_ID" value="567517067874" />
 </plugin>
 <platform name="android">
-<resource-file src="/google-services.json" target="google-services.json" />
+<resource-file src="google-services.json" target="app/google-services.json" />
 </platform>
 <platform name="ios">
-<resource-file src="/GoogleService-Info.plist" target="GoogleService-Info.plist" />
+<resource-file src="GoogleService-Info.plist" target="app/GoogleService-Info.plist" />
 </platform>
 
 <!---<plugin name="com.phonegap.plugins.barcodescanner" />-->
@@ -108,12 +110,12 @@
 <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
 <string>Permitir solo para guardar el video</string>
 </edit-config>
-<gap:plugin name="cordova-plugin-flashlight" source="npm" />
+<plugin name="cordova-plugin-flashlight" source="npm" />
 <!-- <plugin name="cordova-plugin-health" source="npm" />
 <plugin spec="https://github.com/Litekey/heartbeat-cordova-plugin.git" source="git" /> -->
 
-<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
-<gap:plugin name="cordova-plugin-datepicker" source="npm" />
+<plugin name="cordova-plugin-x-socialsharing" source="npm" />
+<plugin name="cordova-plugin-datepicker" source="npm" />
 
 <!-- gap:plugin name="cordova-plugin-background-app" source="npm" / -->
 <!-- <gap:plugin name="cordova-plugin-background-mode" source="npm" />-->
@@ -121,16 +123,21 @@
 <!-- <gap:plugin name="cordova-plugin-fingerprint-aio" source="npm" /> -->
 
 <plugin name="cordova-plugin-android-fingerprint-auth">
-<variable name="FACEID_USAGE_DESCRIPTION" value="Ingresar" />
+<variable name="FACEID_USAGE_DESCRIPTION" value="Ingresar con Huella Digital" />
 </plugin>
 
-<gap:plugin name="cordova-plugin-sqlite-2" source="npm" />
-<gap:plugin name="cordova-plugin-video-editor" source="npm" />
+<plugin name="cordova-plugin-sqlite-2" source="npm" />
+<!-- <plugin name="cordova-plugin-video-editor" source="npm" />
+Conflicto Push / Whitelist -->
 
 <!--
 <gap:plugin name="de.appplant.cordova.plugin.background-mode" /> -->
 <!--<plugin name="hazems-cordova-plugin-sms" source="npm" />-->
-
+<!--
+<gap:plugin name="cordova-plugin-googlemaps" source="npm">
+<param name="API_KEY_FOR_ANDROID" value="AIzaSyCXFNRlaxHSxI8Gqk0iaII5YDTTLwGejSM" />
+<param name="API_KEY_FOR_IOS" value="AIzaSyA0tumqw8e4mmN5_7VH0GCxHtUtSiAZKbI" />
+</gap:plugin> -->
 <icon src="icon.png" />
 
 <platform name="ios">
@@ -185,7 +192,7 @@
 </platform>
 
 <access origin="*"/>
-<plugin name="cordova-plugin-whitelist" />
+<!-- <plugin name="cordova-plugin-whitelist" spec="1.3.4" /> -->
 <allow-navigation href="*" />
 <allow-intent href="http://*/*" />
 <allow-intent href="https://*/*" />

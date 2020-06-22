@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="reportes.epsa.services" version="0.0.1">
+<name>App Reportes</name>
+<description>reportes.epsa.services</description>
+<author href="https://www.epsa.services" email="soporte@epsa.services">EPSA Services</author>
+
+<preference name="android-minSdkVersion" value="18"/>
+<preference name="android-targetSdkVersion" value="28" />
+
+<preference name="phonegap-version" value="cli-7.1.0" />
+<preference name="android-build-tool" value="gradle" />
+
+<preference name="DisallowOverscroll" value="true"/>
+<preference name="permissions"                value="none"/>
+<preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
+<preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
+<preference name="fullscreen"                 value="false" />           <!-- all: hides the status bar at the top of the screen -->
+<preference name="prerendered-icon"           value="true" />           <!-- ios: if icon is prerendered, iOS will not apply it's gloss to the app's icon on the user's home screen -->
+<preference name="webviewbounce"              value="true" />           <!-- ios: control whether the screen 'bounces' when scrolled beyond the top -->
+<preference name="stay-in-webview"            value="false" />          <!-- ios: external links should open in the default browser, 'true' would use the webview the app lives in -->
+<preference name="ios-statusbarstyle"         value="black-opaque" />   <!-- ios: black-translucent will appear black because the PhoneGap webview doesn't go beneath the status bar -->
+<preference name="detect-data-types"          value="false" />           <!-- ios: controls whether data types (such as phone no. and dates) are automatically turned into links by the system -->
+<preference name="exit-on-suspend"            value="false" />          <!-- ios: if set to true, app will terminate when home button is pressed -->
+<preference name="show-splash-screen-spinner" value="true" />           <!-- ios: if set to false, the spinner won't appear on the splash screen during app loading -->
+<preference name="auto-hide-splash-screen"    value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
+<preference name="disable-cursor"             value="false" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
+<preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+<preference name="CameraUsesGeolocation" value="true" />
+<preference name="SplashScreenDelay" value="3000" />
+<preference name="AllowInlineMediaPlayback" value="true"/>
+<preference name="MediaPlaybackRequiresUserAction" value="false"/>
+
+<plugin name="cordova-plugin-battery-status" />
+<!-- <plugin name="cordova-plugin-camera" spec="2.4.1" />
+<plugin name="cordova-plugin-media-capture" spec="2.0.0" /> -->
+<plugin name="cordova-plugin-console" />
+<plugin name="cordova-plugin-contacts" />
+<plugin name="cordova-plugin-device" />
+<!-- <plugin name="cordova-plugin-device-motion" />
+<plugin name="cordova-plugin-device-orientation" /> -->
+<plugin name="cordova-plugin-dialogs" />
+<plugin name="cordova-plugin-camera" source="npm" />
+<plugin name="cordova-plugin-media-capture" source="npm" />
+<plugin name="cordova-plugin-media" source="npm" />
+<!--  spec="~4.3.3" spec="~4.0.0" -->
+<!--<plugin name="cordova-plugin-file" source="npm" />-->
+<!-- <plugin name="cordova-plugin-file-transfer" source="npm" spec="1.6.3" /> -->
+
+<plugin name="cordova-plugin-file-transfer" spec="~1.7.1" />
+<plugin name="cordova-plugin-file" source="npm" spec="~5.0.0" />
+
+<plugin name="cordova-plugin-geolocation" />
+<plugin name="cordova-plugin-inappbrowser" />
+<!--<plugin name="cordova-plugin-media" />-->
+<plugin name="cordova-plugin-network-information" />
+<plugin name="cordova-plugin-splashscreen" />
+<plugin name="cordova-plugin-vibration" />
+<plugin name="cordova-plugin-statusbar"/>
+<plugin name="cordova-plugin-vibration"/>
+<plugin name="cordova-plugin-android-permissions"/>
+<plugin name="cordova-plugin-imei"/>
+
+<plugin name="cordova-plugin-geolocation">
+<variable name="GEOLOCATION_USAGE_DESCRIPTION" value="Posicionamiento en el Mapa" />
+</plugin>
+
+<gap:plugin name="cordova-plugin-x-toast" source="npm" />
+<gap:plugin name="cordova-plugin-customurlscheme" source="npm">
+<param name="URL_SCHEME" value="epsa" />
+</gap:plugin>
+
+<!-- plugin name="cordova-plugin-firebase-messaging" / -->
+<!-- <plugin name="phonegap-plugin-push" spec="~2.0.0"(ok) spec="~2.2.3"(bad) source="npm"> spec="~1.4.5" spec="~2.0.0" -->
+<plugin name="phonegap-plugin-push" source="npm" >
+<param name="SENDER_ID" value="567517067874" />
+</plugin>
+<platform name="android">
+<resource-file src="/google-services.json" target="google-services.json" />
+</platform>
+<platform name="ios">
+<resource-file src="/GoogleService-Info.plist" target="GoogleService-Info.plist" />
+</platform>
+
+<!---<plugin name="com.phonegap.plugins.barcodescanner" />-->
+<!-- <gap:plugin name="phonegap-plugin-barcodescanner" source="npm" spec="^6.0.8" /> -->
+<plugin name="phonegap-plugin-barcodescanner" spec="^7.0.0">
+<variable name="CAMERA_USAGE_DESCRIPTION" value="Activa la camara para poder usar el scanner :)" />
+<variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="Vamos a guardar en libreria" />
+</plugin>
+
+<gap:config-file platform="ios" parent="CFBundleShortVersionString">
+<string>100</string>
+</gap:config-file>
+<edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+<string>Permitir solo para grabar el incidente</string>
+</edit-config>
+<edit-config target="NSMicrophoneUsageDescription" file="*-Info.plist" mode="merge">
+<string>Permitir solo para registrar audio del incidente</string>
+</edit-config>
+<edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
+<string>Permitir solo para localizar el lugar del incidente</string>
+</edit-config>
+<edit-config target="NSPhotoLibraryAddUsageDescription" file="*-Info.plist" mode="merge">
+<string>Permitir solo para guardar el video</string>
+</edit-config>
+<edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
+<string>Permitir solo para guardar el video</string>
+</edit-config>
+<gap:plugin name="cordova-plugin-flashlight" source="npm" />
+<!-- <plugin name="cordova-plugin-health" source="npm" />
+<plugin spec="https://github.com/Litekey/heartbeat-cordova-plugin.git" source="git" /> -->
+
+<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
+<gap:plugin name="cordova-plugin-datepicker" source="npm" />
+
+<!-- gap:plugin name="cordova-plugin-background-app" source="npm" / -->
+<!-- <gap:plugin name="cordova-plugin-background-mode" source="npm" />-->
+<!-- gap:plugin name="cordova-plugin-android-fingerprint-auth" source="npm" / -->
+<!-- <gap:plugin name="cordova-plugin-fingerprint-aio" source="npm" /> -->
+
+<plugin name="cordova-plugin-android-fingerprint-auth">
+<variable name="FACEID_USAGE_DESCRIPTION" value="Ingresar" />
+</plugin>
+
+<gap:plugin name="cordova-plugin-sqlite-2" source="npm" />
+<gap:plugin name="cordova-plugin-video-editor" source="npm" />
+
+<!--
+<gap:plugin name="de.appplant.cordova.plugin.background-mode" /> -->
+<!--<plugin name="hazems-cordova-plugin-sms" source="npm" />-->
+
+<icon src="icon.png" />
+
+<platform name="ios">
+<icon src="icon.png" width="1024" height="1024" />
+
+<icon src="res/icon/ios/icon-small.png" width="29" height="29"/>
+<icon src="res/icon/ios/icon-small@2x.png" width="58" height="58"/>
+<icon src="res/icon/ios/icon-small@3x.png" width="87" height="87"/>
+<icon src="res/icon/ios/icon-small-40.png" width="40" height="40"/>
+<icon src="res/icon/ios/icon-small-40@2x.png" width="80" height="80"/>
+<icon src="res/icon/ios/icon-small-40@3x.png" width="120" height="120"/>
+<icon src="res/icon/ios/icon-small-50.png" width="50" height="50"/>
+<icon src="res/icon/ios/icon-small-50@2x.png" width="100" height="100"/>
+<icon src="res/icon/ios/icon.png" width="57" height="57"/>
+<icon src="res/icon/ios/icon@2x.png" width="114" height="114"/>
+<icon src="res/icon/ios/icon-60.png" width="60" height="60"/>
+<icon src="res/icon/ios/icon-60@2x.png" width="120" height="120"/>
+<icon src="res/icon/ios/icon-60@3x.png" width="180" height="180"/>
+<icon src="res/icon/ios/icon-72.png" width="72" height="72"/>
+<icon src="res/icon/ios/icon-72@2x.png" width="144" height="144"/>
+<icon src="res/icon/ios/icon-76.png" width="76" height="76"/>
+<icon src="res/icon/ios/icon-76@2x.png" width="152" height="152"/>
+<icon src="res/icon/ios/icon-167.png" width="167" height="167"/>
+<icon src="res/icon/ios/icon-83.5@2x.png" width="167" height="167"/>
+
+<splash src="res/screen/ios/Default@2x~iphone~anyany.png"/>
+<splash src="res/screen/ios/Default@2x~iphone~comany.png"/>
+<splash src="res/screen/ios/Default@3x~iphone~anyany.png"/>
+<splash src="res/screen/ios/Default@3x~iphone~comany.png"/>
+<splash src="res/screen/ios/Default@2x~ipad~anyany.png"/>
+<splash src="res/screen/ios/Default@2x~ipad~comany.png"/>
+</platform>
+
+<platform name="android">
+<preference name="SplashMaintainAspectRatio" value="true"/>
+<preference name="SplashShowOnlyFirstTime" value="true"/>
+<icon src="icon.png" width="1024" height="1024" />
+
+<icon density="ldpi" src="res/icon/android/ldpi.png"/>
+<icon density="mdpi" src="res/icon/android/mdpi.png"/>
+<icon density="hdpi" src="res/icon/android/hdpi.png"/>
+<icon density="xhdpi" src="res/icon/android/xhdpi.png"/>
+<icon density="xxhdpi" src="res/icon/android/xxhdpi.png"/>
+<icon density="xxxhdpi" src="res/icon/android/xxxhdpi.png"/>
+
+<splash density="port-ldpi" src="res/screen/android/splash-port-ldpi.png"/>
+<splash density="port-mdpi" src="res/screen/android/splash-port-mdpi.png"/>
+<splash density="port-hdpi" src="res/screen/android/splash-port-hdpi.png"/>
+<splash density="port-xhdpi" src="res/screen/android/splash-port-xhdpi.png"/>
+<splash density="port-xxhdpi" src="res/screen/android/splash-port-xxhdpi.png"/>
+<splash density="port-xxxhdpi" src="res/screen/android/splash-port-xxxhdpi.png"/>
+</platform>
+
+<access origin="*"/>
+<plugin name="cordova-plugin-whitelist" />
+<allow-navigation href="*" />
+<allow-intent href="http://*/*" />
+<allow-intent href="https://*/*" />
+<allow-intent href="tel:*" />
+<allow-intent href="sms:*" />
+<allow-intent href="mailto:*" />
+<allow-intent href="geo:*" />
+
+<platform name="android">
+<allow-intent href="market:*" />
+</platform>
+<platform name="ios">
+<allow-intent href="itms:*" />
+<allow-intent href="itms-apps:*" />
+</platform>
+
+</widget>

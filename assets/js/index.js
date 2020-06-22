@@ -4,13 +4,12 @@ console._error_old = console.error; console.error = function(msg){ alert("error:
 console._warn_old = console.warn; console.warn = function(msg){ alert("warn: "+msg); console._warn_old(msg); }; */
 
 var config_adminpanel_fb = {
-    apiKey: "AIzaSyAgck_wCIAoEfo-iHtv9h1Z9-SXowzZcag",
+    apiKey: "AIzaSyA9rZZZWbeR2OWpsx91HnLLWfTi-pNXOAA",
     authDomain: "ecologiaypetroleo.firebaseapp.com",
     databaseURL: "https://ecologiaypetroleo.firebaseio.com",
     projectId: "ecologiaypetroleo",
     storageBucket: "ecologiaypetroleo.appspot.com",
-    messagingSenderId: "567517067874",
-    appId: "1:567517067874:web:2a81dac3b8fa359b"
+    messagingSenderId: "567517067874"
 };
 //firebase.initializeApp(config_adminpanel_fb);
 

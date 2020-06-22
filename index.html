@@ -1,57 +1,73 @@
-<!doctype html>
-<html lang="es" class="no-focus">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-
-<title>App Reportes</title>
-
-<meta name="description" content="EPSA">
-<meta name="author" content="EPSA">
+<!doctype html><html lang="es" class="no-focus"><head><meta charset="utf-8">
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+<title>reportes.epsa.services</title>
+<meta name="description" content="">
+<meta name="author" content="">
 <meta name="robots" content="noindex, nofollow">
 
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="format-detection" content="telephone=no" />
-<meta name="theme-color" content="#1760BA">
-<meta name="apple-mobile-web-app-title" content="">
-<meta name="msapplication-TileColor" content="#1760BA">
+<meta name="theme-color" content="#ED1C24">
+<meta name="apple-mobile-web-app-title" content="app.epsa.services">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/media/icon.png">
+<meta name="msapplication-TileImage" content="assets/media/icon.png">
+<meta name="msapplication-TileColor" content="#ED1C24">
+<link rel="shortcut icon" href="assets/media/icon.png">
+<link rel="icon" sizes="80x80" href="assets/media/icon.png">
 
 <meta http-equiv="X-DNS-Prefetch-Control" content="on" />
-<link rel="dns-prefetch" href="https://reportes.epsa.services" />
-<link rel="dns-prefetch" href="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4" />
-<link rel="manifest" href="https://reportes.epsa.services/manifest.json">
-<meta name="google-signin-scope" content="profile email">
-<meta name="google-signin-client_id" content="567517067874-k5209vu4abqe128kncga29kat1235epd.apps.googleusercontent.com">
+<link rel="dns-prefetch" href="https://app.epsa.services" />
+<!-- link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,600,700" -->
+<link rel="stylesheet" href="assets/css/muli/muli.css">
+<link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.18/b-1.5.4/b-colvis-1.5.4/fc-3.2.5/r-2.2.2/datatables.min.css"/>
 
-<!-- Stylesheets -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,600,700&display=swap">
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
-<!-- <link rel="stylesheet" id="css-theme" href="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/css/themes/pulse.min.css"> -->
-<link rel="stylesheet" href="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/plugins/magnific-popup/magnific-popup.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.20/af-2.3.4/b-1.6.1/b-html5-1.6.1/b-print-1.6.1/fc-3.3.0/fh-3.1.6/r-2.2.3/sp-1.0.1/sl-1.3.1/datatables.min.css"/>
-<link rel="stylesheet" href="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/plugins/datatables/dataTables.bootstrap4.css">
-<link rel="stylesheet" href="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/plugins/fullcalendar/fullcalendar.min.css">
-<link rel="stylesheet" href="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
-<link rel="stylesheet" href="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
-<link rel="stylesheet" href="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/plugins/select2/css/select2.min.css">
-
 <link rel="stylesheet" id="css-theme" href="assets/css/custom.css">
-<link rel="stylesheet" href="https://reportes.epsa.services/assets/css/reportes.css?1">
-<!-- END Stylesheets -->
+<link rel="stylesheet" href="https://reportes.epsa.services/assets/css/reportes.css?f=22_06_2020">
 
-<script src="assets/js/jquery.min.js"></script>
+<link href="assets/css/font-awesome/font-awesome.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+<link rel="stylesheet" href="assets/js/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+<link rel="stylesheet" href="assets/js/plugins/select2/css/select2.min.css">
+<link rel="stylesheet" href="assets/js/plugins/jquery-tags-input/jquery.tagsinput.min.css">
+<link rel="stylesheet" href="assets/js/plugins/jquery-auto-complete/jquery.auto-complete.min.css">
+<link rel="stylesheet" href="assets/js/plugins/ion-rangeslider/css/ion.rangeSlider.css">
+<link rel="stylesheet" href="assets/js/plugins/ion-rangeslider/css/ion.rangeSlider.skinHTML5.css">
+<link rel="stylesheet" href="assets/js/plugins/dropzonejs/dist/dropzone.css">
+<link rel="stylesheet" href="assets/js/plugins/magnific-popup/magnific-popup.css">
+
 <script src="cordova.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+<script src="assets/js/core/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.touchSwipe.min.js?0"></script>
+<script src="assets/js/core/jquery-ui.min.js"></script>
 
-<link type="text/css" rel="stylesheet" href="assets/js/lightgallery/css/lightgallery.css" />
-<script src="assets/js/lightgallery/js/lightgallery.js"></script>
-<script src="assets/js/lightgallery/js/jquery.mousewheel.min.js"></script>
-<script src="assets/js/lightgallery/js/lg-thumbnail.js"></script>
-<script src="assets/js/lightgallery/js/lg-fullscreen.js"></script>
-<script src="assets/js/lightgallery/js/lg-zoom.js"></script>
-<script src="assets/js/lightgallery/js/lg-autoplay.js"></script>
-<script src="assets/js/lightgallery/js/lg-video.js"></script>
-<script src="assets/js/lightgallery/js/lg-pager.js"></script>
+<script type="text/javascript" src="assets/js/parsley.min.js"></script>
+<script type="text/javascript" src="assets/js/parsley.es.js"></script>
+<script type="text/javascript" src="assets/js/jquery.geocomplete.min.js"></script>
+
+<link type="text/css" rel="stylesheet" href="assets/js/plugins/lightgallery/css/lightgallery.css" />
+<script src="assets/js/plugins/lightgallery/js/lightgallery.js"></script>
+<script src="assets/js/plugins/lightgallery/js/jquery.mousewheel.min.js"></script>
+<script src="assets/js/plugins/lightgallery/js/lg-thumbnail.js"></script>
+<script src="assets/js/plugins/lightgallery/js/lg-fullscreen.js"></script>
+<script src="assets/js/plugins/lightgallery/js/lg-zoom.js"></script>
+<script src="assets/js/plugins/lightgallery/js/lg-autoplay.js"></script>
+<script src="assets/js/plugins/lightgallery/js/lg-video.js"></script>
+<script src="assets/js/plugins/lightgallery/js/lg-pager.js"></script>
+
+<script src="assets/js/firebase/firebase-app.js?v=5.5.2"></script>
+<script src="assets/js/firebase/firebase-auth.js"></script>
+<script src="assets/js/firebase/firebase-database.js"></script>
+<script src="assets/js/firebase/firebase-firestore.js"></script>
+<script src="assets/js/firebase/firebase-messaging.js"></script>
+<script src="assets/js/firebase/firebase-storage.js"></script>
+<script src="assets/js/firebase/firebase-functions.js"></script>
 
 <script src="assets/js/stitch/stitch.js"></script>
 <script src="assets/js/SQLitePlugin.js"></script>
@@ -61,80 +77,49 @@
 
 <script src="https://maps.googleapis.com/maps/api/js?&region=mx&language=es&lang=es&libraries=places,geometry,visualization,drawing&key=AIzaSyA9rZZZWbeR2OWpsx91HnLLWfTi-pNXOAA"></script>
 
-<script src="assets/js/firebase/firebase-app.js"></script>
-<script src="assets/js/firebase/firebase-database.js"></script>
-<script src="assets/js/firebase/firebase-messaging.js"></script>
-<script src="assets/js/firebase/firebase-storage.js"></script>
-<script src="assets/js/firebase/firebase-performance.js"></script>
-<!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
 <script type="text/javascript" src="assets/js/index.js"></script>
 
 </head>
 <body>
-<!-- Page Container
-<div id="page-container" class=" sidebar-inverse_ side-scroll page-header-fixed page-header-inverse main-content-boxed_ side-trans-enabled sidebar-mini"> -->
-<div id="page-container" class=" enable-page-overlay side-scroll page-header-modern_ sidebar-mini page-header-fixed">
-
+<!-- Page Container -->
+<div id="page-container" class="sidebar-o sidebar-inverse_ side-scroll page-header-fixed page-header-inverse main-content-boxed_">
 
 <!-- Sidebar -->
-<!--
-Helper classes
-Adding .sidebar-mini-hide to an element will make it invisible (opacity: 0) when the sidebar is in mini mode
-Adding .sidebar-mini-show to an element will make it visible (opacity: 1) when the sidebar is in mini mode
-If you would like to disable the transition, just add the .sidebar-mini-notrans along with one of the previous 2 classes
-Adding .sidebar-mini-hidden to an element will hide it when the sidebar is in mini mode
-Adding .sidebar-mini-visible to an element will show it only when the sidebar is in mini mode
-- use .sidebar-mini-visible-b if you would like to be a block when visible (display: block)
--->
 <nav id="sidebar">
 <!-- Sidebar Content -->
 <div class="sidebar-content">
 <!-- Side Header -->
-<div class="content-header content-header-fullrow px-15">
-<!-- Mini Mode -->
-<div class="content-header-section sidebar-mini-visible-b">
-<!-- Logo -->
-<span class="content-header-item font-w700 font-size-xl float-left animated fadeIn sys_name_corto">
-<span class="text-dual-primary-dark">EPSA</span><span class="text-primary"></span>
-</span>
-<!-- END Logo -->
-</div>
-<!-- END Mini Mode -->
-
-<!-- Normal Mode -->
-<div class="content-header-section text-center align-parent sidebar-mini-hidden">
+<div class="content-header content-header-fullrow bg-content-header">
+<div class="content-header-section text-center_ align-parent">
 <!-- Close Sidebar, Visible only on mobile screens -->
 <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
 <button type="button" class="btn btn-circle btn-dual-secondary d-lg-none align-v-r" data-toggle="layout" data-action="sidebar_close">
-<i class="fa fa-times text-danger"></i>
+<i class="fa fa-times text-white"></i>
 </button>
 <!-- END Close Sidebar -->
 
 <!-- Logo -->
-<div class="content-header-item">
-<a class="link-effect font-w700" href="index.html">
-<!-- <i class="si si-fire text-primary"></i> -->
-<span class="font-size-xl text-dual-primary-dark"></span>
-<span class="font-size-xl text-primary sys_name">EPSA</span>
-</a>
-</div>
+<div class="content-header-item"><a class="link-effect_ font-w700" href="index.html">
+<span class="font-size-xl"><img src="assets/media/icon.png?0" class="img-fluid" ></span>
+</a></div>
 <!-- END Logo -->
 </div>
-<!-- END Normal Mode -->
 </div>
 <!-- END Side Header -->
 
-<!-- Side Navigation -->
+<!-- Side Main Navigation -->
 <div class="content-side content-side-full">
-<ul class="nav-main navsillo" id="js-nav-menu">
-<!-- default -->
-
-<li><a href="#index"><i class="si si-home"></i><span class="sidebar-mini-hide">Bienvenida</span></a></li>
-<!-- <li class="nav-main-heading"><span class="sidebar-mini-visible">M</span><span class="sidebar-mini-hidden">Men&uacute;</span></li> -->
-
-</ul>
+<!--
+Mobile navigation, desktop navigation can be found in #page-header
+If you would like to use the same navigation in both mobiles and desktops, you can use exactly the same markup inside sidebar and header navigation ul lists
+-->
+<div class="navsillo_main">
+<ul class="nav-main navsillo_ ">
+<li><a class="active_" href="index.html"><i class="si si-home"></i>Inicio</a></li></ul>
 </div>
-<!-- END Side Navigation -->
+
+</div>
+<!-- END Side Main Navigation -->
 </div>
 <!-- Sidebar Content -->
 </nav>
@@ -146,19 +131,33 @@ Adding .sidebar-mini-visible to an element will show it only when the sidebar is
 <div class="content-header">
 <!-- Left Section -->
 <div class="content-header-section">
-<!-- Toggle Sidebar -->
-<!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-<button type="button" class="btn btn-circle btn-dual-secondary" data-toggle="layout" data-action="sidebar_toggle">
-<i class="fa fa-navicon"></i>
-</button>
-<!-- END Toggle Sidebar -->
-
+<!-- Logo -->
+<div class="content-header-item">
+<a class="link-effect_ font-w700 mr-5" href="index.html">
+<span class="font-size-xl text-white main_title_">Inicio</span>
+</a>
+</div>
+<!-- END Logo -->
 </div>
 <!-- END Left Section -->
+
+<!-- Middle Section -->
+<div class="content-header-section d-none d-lg-block">
+<!-- Header Navigation -->
+
+<!-- END Header Navigation -->
+</div>
+<!-- END Middle Section -->
 
 <!-- Right Section -->
 <div class="content-header-section">
 
+<!-- Toggle Sidebar -->
+<!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+<button type="button" class="btn btn-circle btn-dual-secondary d-lg-none_" data-toggle="layout" data-action="sidebar_toggle">
+<i class="fa fa-navicon"></i>
+</button>
+<!-- END Toggle Sidebar -->
 </div>
 <!-- END Right Section -->
 </div>
@@ -180,13 +179,6 @@ Adding .sidebar-mini-visible to an element will show it only when the sidebar is
 <!-- Main Container -->
 <main id="main-container">
 
-<!-- Page Content
-<div class="content">
-<h2 class="content-heading">Main Content - Full Width</h2>
-<p>Content always takes up all the available width of the main container. A maximum width is set for extra large screen widths.</p>
-</div>-->
-<!-- END Page Content -->
-
 <div class="alert_top" style="display: none;">
 <div class="alert alert-danger alert-dismissable" role="alert">
 <button type="button" class="close" data-dismiss="alert" aria-label="Cerrar"><span aria-hidden="true">&times;</span></button>
@@ -194,25 +186,28 @@ Adding .sidebar-mini-visible to an element will show it only when the sidebar is
 </div>
 </div>
 
-<div class="content_ content-full_" id="js-page-content"></div>
+<div class="content_ content-full_ ajax-content" id="content">
 
-<div class="check_internet alert alert-danger" style="display: none;">
-<p>Se perdi&oacute; la conexi&oacute;n de Internet, es posible que sus peticiones no lleguen al servidor, espere un momento y reintente nuevamente :(</p>
 </div>
+<!-- END Page Content -->
+
 </main>
 <!-- END Main Container -->
 
+<div class="modal modalin" id="modal-large" tabindex="-1" role="dialog" aria-labelledby="modal-large" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content modalin_content"></div>
+</div></div>
+
 <!-- Footer -->
 <footer id="page-footer" class="opacity-0">
-<div class="content py-20 font-size-sm clearfix">
+<div class="content py-20 font-size-xs clearfix">
 <div class="float-right">
-<i class="fa fa-code text-pulse"></i> <a class="font-w600" href="index.html" target="_blank">EPSA Programaci&oacute;n</a> <!-- <span class="js-year-copy"></span> -->
-<span class="live_session"></span>
- - <i class="fa fa-cloud-download" aria-hidden="true"></i> <span class="response_upload_text"></span>
- <span class="web_push"></span>
+
 </div>
-<div class="float-left sys_name_f_l">
-<a class="font-w600" href="#" target="_blank"></a>
+<div class="float-left div_footer">
+&copy; <a class="font-w600 footer_title">Inicio</a>
+<span class="live_session"></span> <span class="response_upload_text"></span><span class="web_push"></span>
 </div>
 </div>
 </footer>
@@ -223,10 +218,37 @@ Adding .sidebar-mini-visible to an element will show it only when the sidebar is
 <script src="assets/js/codebase.core.min.js"></script>
 <script src="assets/js/codebase.app.min.js"></script>
 
-<script type="text/javascript" src="assets/js/jquery.geocomplete.min.js"></script>
+<script src="assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="assets/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="assets/js/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+<script src="assets/js/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+<script src="assets/js/plugins/select2/js/select2.full.min.js"></script>
+<script src="assets/js/plugins/jquery-tags-input/jquery.tagsinput.min.js"></script>
+<script src="assets/js/plugins/jquery-auto-complete/jquery.auto-complete.min.js"></script>
+<script src="assets/js/plugins/masked-inputs/jquery.maskedinput.min.js"></script>
+<script src="assets/js/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+<script src="assets/js/plugins/dropzonejs/dropzone.min.js"></script>
+<script src="assets/js/plugins/pwstrength-bootstrap/pwstrength-bootstrap.min.js"></script>
+
+<script src="assets/js/core/jquery.slimscroll.min.js"></script>
+<script src="assets/js/core/jquery-scrollLock.min.js"></script>
+<script src="assets/js/core/jquery.appear.min.js"></script>
+<script src="assets/js/core/jquery.countTo.min.js"></script>
+<script src="assets/js/core/js.cookie.min.js"></script>
+<script src="assets/js/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<script src="assets/js/plugins/sparkline/jquery.sparkline.min.js"></script>
+<script src="assets/js/plugins/easy-pie-chart/jquery.easypiechart.min.js"></script>
+<script src="assets/js/plugins/chartjs/Chart.bundle.min.js"></script>
+<script src="assets/js/plugins/flot/jquery.flot.min.js"></script>
+<script src="assets/js/plugins/flot/jquery.flot.pie.min.js"></script>
+<script src="assets/js/plugins/flot/jquery.flot.stack.min.js"></script>
+<script src="assets/js/plugins/flot/jquery.flot.resize.min.js"></script>
 
 <script type="text/javascript" charset="ISO-8859-1">
 if ( typeof device == 'undefined'){ var device = {}; }
+
 var app = {
 initialize: function(){ this.bindEvents(); },
 bindEvents: function(){ document.addEventListener('deviceready', this.onDeviceReady, false); },
@@ -235,32 +257,32 @@ app.receivedEvent('deviceready');
 localStorage.setItem("info_device", JSON.stringify(device));
 ActivateOnline();
 },
-receivedEvent: function(id){  }
+receivedEvent: function(id){ }
 };
 app.initialize();
 
 jQuery(document).ready(function($){ });
-
-//var device = {};
 //$.getScript(window.url_server_firebase, function(){ });
 window.onOnline = function onOnline(handle) {
-if(handle) {  } else { handle = window.handle_url; }
+if(handle) { } else { handle = window.handle_url; }
 var token_push = window.localStorage.getItem("token_push");
 var User_Lat = window.localStorage.getItem("User_Lat");
 var User_Lon = window.localStorage.getItem("User_Lon");
 var geo_aprox = window.localStorage.getItem("geo_aprox");
+//alert(token_push);
 $.ajaxSetup({ async:true, cache: true });
 $.getScript(window.url_server+'/assets/js/header_web.php?is_app=1&id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device='+JSON.stringify(device) + '&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url='+JSON.stringify(handle)+'&is_app=1', function(){
-$(".js-page-content").html("<div class='main-content'><div align='center'><i class='fa fa-cog fa-spin'></i> <a href='index.html'>Recargar en caso de tiempo excedido</a></div></div>");
+//$(".ajax-content").html("<div class='main-content'><div align='center'><i class='fa fa-cog fa-spin'></i></div></div>");
 });
-
+//$.getScript(window.url_server+'/assets/js/app.ajax.php?is_app=1&id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device='+JSON.stringify(device) + '&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url='+JSON.stringify(handle)+'&is_app=1', function(){ });
+$.getScript('assets/js/app.ajax.js', function(){ });
 $(".ajax-content").ajaxError(function( e, jqxhr, settings, exception ) {
 $(this).prepend("No se pudo enlazar con el servidor.<br>" + e + "<br>"+jqxhr);
 });
 };
 
 function onOffline() {
-//$.getScript('phonegap/offline.js', function(){  });
+//$.getScript('phonegap/offline.js', function(){ });
 //$(".ajax-content").html("<div class='main-content'><div align='center'><br><a href='index.html' class='btn btn-primary btn-lg btn-block'><i class='fa fa-thumbs-down' aria-hidden='true'></i> Sin conexi&oacute;n a la red, click para reintentar.</a></div></div>");
 }
 
@@ -276,25 +298,15 @@ location = "index.html";
 navigator.notification.confirm('¿Esta seguro?', onConfirm,'Esta por borrar sus datos', ['Si','No'] );
 };
 
-ActivateOnline();
+//ActivateOnline();
 document.addEventListener("offline", onOffline, false);
 //document.addEventListener("online", ActivateOnline, false);
 function ActivateOnline(){ window.onOnline(); }
 </script>
 
-<!-- <script src="https://reportes.epsa.services/assets/js/header_web.php?is_app=1"></script> -->
-<!-- <script src="https://reportes.epsa.services/assets/js/app.ajax.php?is_app=1"></script> -->
-
-<script src="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-<script src="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
-<script src="assets/js/core/jquery-scrollLock.min.js"></script>
-<script src="assets/js/core/jquery.appear.min.js"></script>
-<script src="assets/js/core/jquery.countTo.min.js"></script>
-<script src="assets/js/core/js.cookie.min.js"></script>
-<script src="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/pages/be_ui_icons.min.js"></script>
-<script src="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<!--<script src="assets/js/app.ajax.js"></script>-->
 <script>
-$.getScript(window.url_server+'/assets/js/app.ajax.php?is_app=1&id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device='+JSON.stringify(device) + '&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url='+JSON.stringify(handle)+'&is_app=1', function(){
+jQuery(document).ready(function($){
 
 });
 </script>

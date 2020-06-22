@@ -1,0 +1,119 @@
+{
+  "project_info": {
+    "project_number": "567517067874",
+    "firebase_url": "https://ecologiaypetroleo.firebaseio.com",
+    "project_id": "ecologiaypetroleo",
+    "storage_bucket": "ecologiaypetroleo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567517067874:android:60169f6cd2201c95",
+        "android_client_info": {
+          "package_name": "app.epsa.services"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "567517067874-k5209vu4abqe128kncga29kat1235epd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGRoRnnQu-F-hK4H70EQlZmRMNfSdWSaM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "567517067874-f6kiruq81i6v6vdhfj4i08fum3qjph7i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "567517067874-87l0ceni4vbmha3dg57mq1ij7ngt8fnr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.epsa.services"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567517067874:android:b46f949399d33d06146f3b",
+        "android_client_info": {
+          "package_name": "reportes.epsa.services"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "567517067874-k5209vu4abqe128kncga29kat1235epd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGRoRnnQu-F-hK4H70EQlZmRMNfSdWSaM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "567517067874-f6kiruq81i6v6vdhfj4i08fum3qjph7i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "567517067874-87l0ceni4vbmha3dg57mq1ij7ngt8fnr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.epsa.services"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567517067874:android:f301efb79c9e8292",
+        "android_client_info": {
+          "package_name": "xyz.alerta.epsars"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "567517067874-k5209vu4abqe128kncga29kat1235epd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGRoRnnQu-F-hK4H70EQlZmRMNfSdWSaM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "567517067874-f6kiruq81i6v6vdhfj4i08fum3qjph7i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "567517067874-87l0ceni4vbmha3dg57mq1ij7ngt8fnr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.epsa.services"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
