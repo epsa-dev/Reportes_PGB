@@ -2,9 +2,9 @@
 
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="reportes.epsa.services" version="0.0.1">
-<name>EPSA 2.0</name>
-<description>app.epsa.services</description>
-<author href="http://app.epsa.services/" email="soporte@epsa.services">EPSA Services</author>
+<name>App Reportes</name>
+<description>areportes.epsa.services</description>
+<author href="http://reportes.epsa.services/" email="soporte@epsa.services">EPSA Services</author>
 
 <preference name="android-minSdkVersion" value="21"/>
 <preference name="android-targetSdkVersion" value="28" />
