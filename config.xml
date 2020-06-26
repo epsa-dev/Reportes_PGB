@@ -3,7 +3,7 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="reportes.epsa.services" version="0.0.1">
 <name>App Reportes</name>
-<description>areportes.epsa.services</description>
+<description>reportes.epsa.services</description>
 <author href="http://reportes.epsa.services/" email="soporte@epsa.services">EPSA Services</author>
 
 <preference name="android-minSdkVersion" value="18"/>
@@ -48,6 +48,7 @@
 <!--<plugin name="cordova-plugin-file" source="npm" />-->
 <!-- <plugin name="cordova-plugin-file-transfer" source="npm" spec="1.6.3" /> -->
 
+<plugin name="phonegap-plugin-contentsync" />
 <plugin name="cordova-plugin-file-transfer" spec="~1.7.1" />
 <plugin name="cordova-plugin-file" source="npm" spec="~6.0.0" />
 <preference name="AndroidPersistentFileLocation" value="Compatibility" />
