@@ -72,7 +72,7 @@
 <variable name="FACEID_USAGE_DESCRIPTION" value="Ingresar con Huella Digital" />
 </plugin>
 
-<plugin name="pouchdb-adapter-cordova-sqlite" source="npm" />
+<!-- <plugin name="pouchdb-adapter-cordova-sqlite" source="npm" /> -->
 <plugin name="cordova-plugin-sqlite-2" source="npm" />
 
 <!-- <plugin name="cordova-plugin-device-motion" />
