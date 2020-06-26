@@ -29,10 +29,10 @@
 <preference name="SplashScreenDelay" value="3000" />
 <preference name="AllowInlineMediaPlayback" value="true"/>
 <preference name="MediaPlaybackRequiresUserAction" value="false"/>
-<preference name="AndroidPersistentFileLocation" value="Compatibility" />
 <preference name="StatusBarOverlaysWebView" value="false" />
 <preference name="StatusBarBackgroundColor" value="#009E58" />
 <preference name="StatusBarStyle" value="blacktranslucent" />
+<preference name="AndroidPersistentFileLocation" value="Compatibility" />
 
 <plugin name="cordova-plugin-battery-status" />
 <plugin name="cordova-plugin-console" />
