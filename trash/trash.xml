@@ -124,7 +124,6 @@
 
 <platform name="ios">
 <icon src="icon.png" width="1024" height="1024" />
-
 <icon src="res/icon/ios/icon-small.png" width="29" height="29"/>
 <icon src="res/icon/ios/icon-small@2x.png" width="58" height="58"/>
 <icon src="res/icon/ios/icon-small@3x.png" width="87" height="87"/>
@@ -144,7 +143,6 @@
 <icon src="res/icon/ios/icon-76@2x.png" width="152" height="152"/>
 <icon src="res/icon/ios/icon-167.png" width="167" height="167"/>
 <icon src="res/icon/ios/icon-83.5@2x.png" width="167" height="167"/>
-
 <splash src="res/screen/ios/Default@2x~iphone~anyany.png"/>
 <splash src="res/screen/ios/Default@2x~iphone~comany.png"/>
 <splash src="res/screen/ios/Default@3x~iphone~anyany.png"/>
@@ -157,14 +155,12 @@
 <preference name="SplashMaintainAspectRatio" value="true"/>
 <preference name="SplashShowOnlyFirstTime" value="true"/>
 <icon src="icon.png" width="1024" height="1024" />
-
 <icon density="ldpi" src="res/icon/android/ldpi.png"/>
 <icon density="mdpi" src="res/icon/android/mdpi.png"/>
 <icon density="hdpi" src="res/icon/android/hdpi.png"/>
 <icon density="xhdpi" src="res/icon/android/xhdpi.png"/>
 <icon density="xxhdpi" src="res/icon/android/xxhdpi.png"/>
 <icon density="xxxhdpi" src="res/icon/android/xxxhdpi.png"/>
-
 <splash density="port-ldpi" src="res/screen/android/splash-port-ldpi.png"/>
 <splash density="port-mdpi" src="res/screen/android/splash-port-mdpi.png"/>
 <splash density="port-hdpi" src="res/screen/android/splash-port-hdpi.png"/>
