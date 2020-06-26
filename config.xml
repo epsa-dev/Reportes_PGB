@@ -6,7 +6,7 @@
 <description>areportes.epsa.services</description>
 <author href="http://reportes.epsa.services/" email="soporte@epsa.services">EPSA Services</author>
 
-<preference name="android-minSdkVersion" value="21"/>
+<preference name="android-minSdkVersion" value="18"/>
 <preference name="android-targetSdkVersion" value="28" />
 <!-- https://build.phonegap.com/current-support -->
 <preference name="phonegap-version" value="cli-7.1.0" />
@@ -49,7 +49,7 @@
 <!-- <plugin name="cordova-plugin-file-transfer" source="npm" spec="1.6.3" /> -->
 
 <plugin name="cordova-plugin-file-transfer" spec="~1.7.1" />
-<plugin name="cordova-plugin-file" source="npm" spec="~5.0.0" />
+<plugin name="cordova-plugin-file" source="npm" spec="~6.0.0" />
 <preference name="AndroidPersistentFileLocation" value="Compatibility" />
 
 <plugin name="cordova-plugin-geolocation" />
