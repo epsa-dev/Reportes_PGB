@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>567517067874-87l0ceni4vbmha3dg57mq1ij7ngt8fnr.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.567517067874-87l0ceni4vbmha3dg57mq1ij7ngt8fnr</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBtPetPzTi5X22YtDSiQe4iuOrTv5S4R1k</string>
+	<key>GCM_SENDER_ID</key>
+	<string>567517067874</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>app.epsa.services</string>
+	<key>PROJECT_ID</key>
+	<string>ecologiaypetroleo</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ecologiaypetroleo.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:567517067874:ios:60169f6cd2201c95</string>
+	<key>DATABASE_URL</key>
+	<string>https://ecologiaypetroleo.firebaseio.com</string>
+</dict>
+</plist>
