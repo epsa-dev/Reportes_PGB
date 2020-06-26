@@ -4,10 +4,10 @@
 <description>reportes.epsa.services</description>
 <author href="http://reportes.epsa.services/" email="soporte@epsa.services">EPSA Services</author>
 
-<preference name="android-minSdkVersion" value="18"/>
+<preference name="android-minSdkVersion" value="20"/>
 <preference name="android-targetSdkVersion" value="28" />
-<!-- https://build.phonegap.com/current-support : cli-7.1.0 -->
-<preference name="phonegap-version" value="cli-9.0.0" />
+<!-- https://build.phonegap.com/current-support : cli-7.1.0 cli-9.0.0 -->
+<preference name="phonegap-version" value="cli-7.1.0" />
 <preference name="android-build-tool" value="gradle" />
 
 <preference name="DisallowOverscroll" value="true"/>
@@ -140,6 +140,7 @@
 <string>Permitir solo para guardar el video</string>
 </edit-config>
 
+<content src="index.html" />
 <access origin="*"/>
 <allow-navigation href="*" />
 <allow-intent href="http://*/*" />
