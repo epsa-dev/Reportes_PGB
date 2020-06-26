@@ -64,7 +64,8 @@
 <platform name="android"><resource-file src="google-services.json" target="app/google-services.json" /></platform>
 <platform name="ios"><resource-file src="GoogleService-Info.plist" target="app/GoogleService-Info.plist" /></platform>
 
-<plugin name="phonegap-plugin-barcodescanner" spec="^7.0.0"><variable name="CAMERA_USAGE_DESCRIPTION" value="Activa la camara para poder usar el scanner :)" />
+<plugin name="phonegap-plugin-barcodescanner" spec="^7.0.0">
+<variable name="CAMERA_USAGE_DESCRIPTION" value="Activa la camara para poder usar el scanner :)" />
 <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="Vamos a guardar en libreria" /></plugin>
 
 <plugin name="cordova-plugin-flashlight" source="npm" />
@@ -75,7 +76,6 @@
 </plugin>
 
 <plugin name="cordova-plugin-sqlite-2" />
-<plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
 
 <icon src="icon.png" />
 
@@ -126,7 +126,7 @@
 <splash src="res/screen/ios/Default@2x~ipad~comany.png"/>
 </platform>
 
-<!-- <gap:config-file platform="ios" parent="CFBundleShortVersionString"><string>100</string></gap:config-file> -->
+<gap:config-file platform="ios" parent="CFBundleShortVersionString"><string>100</string></gap:config-file>
 <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
 <string>Permitir solo para grabar el reporte</string>
 </edit-config>
