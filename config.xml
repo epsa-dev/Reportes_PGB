@@ -4,7 +4,7 @@
 <description>reportes.epsa.services</description>
 <author href="http://reportes.epsa.services/" email="soporte@epsa.services">EPSA Services</author>
 
-<preference name="android-minSdkVersion" value="20"/>
+<preference name="android-minSdkVersion" value="14"/>
 <preference name="android-targetSdkVersion" value="28" />
 <!-- https://build.phonegap.com/current-support : cli-7.1.0 cli-9.0.0 -->
 <preference name="phonegap-version" value="cli-7.1.0" />
@@ -30,6 +30,9 @@
 <preference name="AllowInlineMediaPlayback" value="true"/>
 <preference name="MediaPlaybackRequiresUserAction" value="false"/>
 <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+<preference name="StatusBarOverlaysWebView" value="false" />
+<preference name="StatusBarBackgroundColor" value="#009E58" />
+<preference name="StatusBarStyle" value="blacktranslucent" />
 
 <plugin name="cordova-plugin-battery-status" />
 <plugin name="cordova-plugin-console" />
@@ -57,8 +60,7 @@
 <gap:plugin name="cordova-plugin-x-toast" source="npm" /><gap:plugin name="cordova-plugin-customurlscheme" source="npm">
 <param name="URL_SCHEME" value="reportes" /></gap:plugin>
 
-<plugin name="phonegap-plugin-push" source="npm" >
-<param name="SENDER_ID" value="567517067874" /></plugin>
+<plugin name="phonegap-plugin-push" source="npm"><param name="SENDER_ID" value="567517067874" /></plugin>
 <platform name="android"><resource-file src="google-services.json" target="app/google-services.json" /></platform>
 <platform name="ios"><resource-file src="GoogleService-Info.plist" target="app/GoogleService-Info.plist" /></platform>
 
@@ -73,6 +75,7 @@
 </plugin>
 
 <plugin name="cordova-plugin-sqlite-2" />
+<plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
 
 <icon src="icon.png" />
 
@@ -123,7 +126,7 @@
 <splash src="res/screen/ios/Default@2x~ipad~comany.png"/>
 </platform>
 
-<edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="merge"><string>100</string></edit-config>
+<!-- <gap:config-file platform="ios" parent="CFBundleShortVersionString"><string>100</string></gap:config-file> -->
 <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
 <string>Permitir solo para grabar el reporte</string>
 </edit-config>
