@@ -73,7 +73,7 @@
 </plugin>
 
 <!-- <plugin name="pouchdb-adapter-cordova-sqlite" source="npm" /> -->
-<plugin name="cordova-plugin-sqlite-2" source="npm" />
+<plugin name="cordova-plugin-sqlite-2" />
 
 <!-- <plugin name="cordova-plugin-device-motion" />
 <plugin name="cordova-plugin-device-orientation" /> -->
