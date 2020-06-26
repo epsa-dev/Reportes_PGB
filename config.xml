@@ -35,7 +35,6 @@
 <preference name="AndroidPersistentFileLocation" value="Compatibility" />
 
 <plugin name="cordova-plugin-battery-status" />
-<plugin name="cordova-plugin-console" />
 <plugin name="cordova-plugin-contacts" />
 <plugin name="cordova-plugin-device" />
 <plugin name="cordova-plugin-dialogs" />
