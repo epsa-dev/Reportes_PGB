@@ -21,11 +21,7 @@ a .text-title_app { color: #292f72 !important; font-size: 2.0rem!important; }
 
 .block-content_il .block-content { padding: 10px 10px 10px 10px; }
 
-.select2-container--default .select2-selection--multiple .select2-selection__choice {
-height: 22px;
-line-height: 22px;
-color: #000 !important;
-}
+.select2-container--default .select2-selection--multiple .select2-selection__choice { height: 22px; line-height: 22px; color: #000 !important; }
 
 .select2-container .select2-selection--single { height: 34px !important; }
 .select2-container--default .select2-selection--single .select2-selection__rendered {
