@@ -5,7 +5,7 @@
 
 .content-header-item img { max-height: 50px; margin-top: 10px; margin-left: 5px; }
 
-select.form-control:not([size]):not([multiple]) { height: 34px; }
+select.form-control_bad:not([size]):not([multiple]) { height: 34px; }
 
 #page-container.page-header-inverse #page-header { color: #292f72; background-color: #FFFFFF; }
 
