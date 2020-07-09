@@ -75,7 +75,6 @@
 <div id="page-container" class=" sidebar-inverse_ side-scroll page-header-fixed page-header-inverse main-content-boxed_ side-trans-enabled sidebar-mini"> -->
 <div id="page-container" class=" enable-page-overlay side-scroll page-header-modern_ sidebar-mini page-header-fixed">
 
-
 <!-- Sidebar -->
 <!--
 Helper classes
@@ -280,7 +279,7 @@ navigator.notification.confirm('¿Esta seguro?', onConfirm,'Esta por borrar sus 
 
 //ActivateOnline();
 document.addEventListener("offline", onOffline, false);
-//document.addEventListener("online", ActivateOnline, false);
+document.addEventListener("online", ActivateOnline, false);
 function ActivateOnline(){ window.onOnline(); }
 </script>
 
