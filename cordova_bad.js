@@ -1,0 +1,2 @@
+var cordova = {};
+var StatusBar = [];
