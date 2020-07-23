@@ -189,7 +189,7 @@ Adding .sidebar-mini-visible to an element will show it only when the sidebar is
 </div>
 </div>
 
-<div class="content_ content-full_" id="js-page-content"> Un momento por favor...</div>
+<div class="content_ content-full_" id="js-page-content"><p style="text-align:center">Un momento por favor...</p></div>
 
 <div class="check_internet alert alert-danger" style="display: none;">
 <p>Se perdi&oacute; la conexi&oacute;n de Internet, es posible que sus peticiones no lleguen al servidor, espere un momento y reintente nuevamente :(</p>
@@ -252,6 +252,9 @@ $(".js-page-content").html("<div class='main-content'><div align='center'><i cla
 $(".ajax-content").ajaxError(function( e, jqxhr, settings, exception ) {
 $(this).prepend("No se pudo enlazar con el servidor.<br>" + e + "<br>"+jqxhr);
 });
+
+onOnlineAjax();
+
 };
 
 function onOffline() {
@@ -290,9 +293,11 @@ function ActivateOnline(){ window.onOnline(); }
 <script src="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/pages/be_ui_icons.min.js"></script>
 <script src="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
 <script>
+window.onOnlineAjax = function onOnline(handle) {
 $.getScript(window.url_server+'/assets/js/app.ajax.php?is_app=1&id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device='+JSON.stringify(device) + '&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url='+JSON.stringify(handle)+'', function(){
 
 });
+};
 </script>
 
 </body>
