@@ -4,10 +4,10 @@
 <description>reportes.epsa.services</description>
 <author href="http://reportes.epsa.services/" email="soporte@epsa.services">EPSA Services</author>
 
-<preference name="android-minSdkVersion" value="21"/>
-<preference name="android-targetSdkVersion" value="28" />
+<preference name="android-minSdkVersion" value="18"/>
+<preference name="android-targetSdkVersion" value="26" />
 <!-- https://build.phonegap.com/current-support : cli-7.1.0 cli-9.0.0 -->
-<preference name="phonegap-version" value="cli-9.0.0" />
+<preference name="phonegap-version" value="cli-7.1.0" />
 <preference name="android-build-tool" value="gradle" />
 
 <preference name="DisallowOverscroll" value="true"/>
@@ -35,6 +35,7 @@
 <preference name="AndroidPersistentFileLocation" value="Compatibility" />
 
 <plugin name="cordova-plugin-battery-status" />
+<plugin name="cordova-plugin-console" />
 <plugin name="cordova-plugin-contacts" />
 <plugin name="cordova-plugin-device" />
 <plugin name="cordova-plugin-dialogs" />
