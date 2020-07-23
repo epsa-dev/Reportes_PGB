@@ -229,8 +229,8 @@ bindEvents: function(){ document.addEventListener('deviceready', this.onDeviceRe
 onDeviceReady: function(){
 
 var permissions = cordova.plugins.permissions;
-permissions.requestPermission(permissions.INTERNET, function( status ){ if ( status.hasPermission ){  } else {  } });
-permissions.requestPermission(permissions.ACCESS_NETWORK_STATE, function( status ){ if ( status.hasPermission ){  } else {  } });
+permissions.requestPermission(permissions.INTERNET, function( status ){ if ( status.hasPermission ){ alert("OK: INTERNET"); } else {  } });
+permissions.requestPermission(permissions.ACCESS_NETWORK_STATE, function( status ){ if ( status.hasPermission ){ alert("OK: ACCESS_NETWORK_STATE"); } else {  } });
 
 app.receivedEvent('deviceready');
 localStorage.setItem("info_device", JSON.stringify(device));
