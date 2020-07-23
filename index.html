@@ -220,14 +220,17 @@ Adding .sidebar-mini-visible to an element will show it only when the sidebar is
 <script type="text/javascript" src="assets/js/jquery.geocomplete.min.js"></script>
 
 <script type="text/javascript" charset="ISO-8859-1">
-if ( typeof device == 'undefined'){ var device = {}; }
+//if ( typeof device == 'undefined'){ var device = {}; }
 var app = {
 initialize: function(){ this.bindEvents(); },
 bindEvents: function(){ document.addEventListener('deviceready', this.onDeviceReady, false); },
 onDeviceReady: function(){
+alert("1");
 app.receivedEvent('deviceready');
 localStorage.setItem("info_device", JSON.stringify(device));
+alert("2");
 ActivateOnline();
+alert("4");
 },
 receivedEvent: function(id){  }
 };
@@ -238,6 +241,7 @@ jQuery(document).ready(function($){ });
 //var device = {};
 //$.getScript(window.url_server_firebase, function(){ });
 window.onOnline = function onOnline(handle) {
+alert("5");
 $(".check_internet").hide("fast");
 if(handle) {  } else { handle = window.handle_url; }
 var token_push = window.localStorage.getItem("token_push");
@@ -278,7 +282,7 @@ navigator.notification.confirm('¿Esta seguro?', onConfirm,'Esta por borrar sus 
 //ActivateOnline();
 document.addEventListener("offline", onOffline, false);
 //document.addEventListener("online", ActivateOnline, false);
-function ActivateOnline(){ window.onOnline(); }
+function ActivateOnline(){ window.onOnline(); alert("3"); }
 </script>
 
 <!-- <script src="https://reportes.epsa.services/assets/js/header_web.php?is_app=1"></script> -->
