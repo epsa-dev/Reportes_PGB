@@ -2,7 +2,7 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="reportes.epsa.services" version="0.0.2">
 <name>App Reportes</name>
 <description>reportes.epsa.services</description>
-<author href="http://reportes.epsa.services/" email="soporte@epsa.services">EPSA Services</author>
+<author href="http://reportes.epsa.services" email="soporte@epsa.services">EPSA Services</author>
 
 <preference name="android-minSdkVersion" value="18"/>
 <preference name="android-targetSdkVersion" value="26" />
