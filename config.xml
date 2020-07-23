@@ -30,7 +30,7 @@
 <preference name="AllowInlineMediaPlayback" value="true"/>
 <preference name="MediaPlaybackRequiresUserAction" value="false"/>
 <preference name="StatusBarOverlaysWebView" value="false" />
-<preference name="StatusBarBackgroundColor" value="#E62E39" />
+<preference name="StatusBarBackgroundColor" value="#002851" />
 <preference name="StatusBarStyle" value="blacktranslucent" />
 <preference name="AndroidPersistentFileLocation" value="Compatibility" />
 
