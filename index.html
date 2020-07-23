@@ -236,14 +236,13 @@ receivedEvent: function(id){  }
 };
 app.initialize();
 
-jQuery(document).ready(function($){ });
-
 var url_server = localStorage.getItem('url_server'); var url_server_def = "https://reportes.epsa.services";
 if (!url_server) { window.url_server = url_server_def; localStorage.setItem('url_server', url_server_def); } else { window.url_server = url_server; }
 var id_cliente = window.localStorage.getItem("id_cliente"); if (!id_cliente) { window.id_cliente = "default"; } else { window.id_cliente = id_cliente; }
 
+jQuery(document).ready(function($){ });
+
 //var device = {};
-//$.getScript(window.url_server_firebase, function(){ });
 window.onOnline = function onOnline(handle) {
 alert("onOnline");
 $(".check_internet").hide("fast");
