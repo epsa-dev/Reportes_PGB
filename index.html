@@ -10,6 +10,27 @@
 <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src * 'unsafe-inline'; media-src *" /> -->
 <!-- <link rel="manifest" href="https://reportes.epsa.services/manifest.json"> -->
 <!-- Stylesheets -->
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" charset="ISO-8859-1">
+if ( typeof device == 'undefined'){ var device = {}; }
+var app = {
+initialize: function(){ this.bindEvents(); },
+bindEvents: function(){ document.addEventListener('deviceready', this.onDeviceReady, false); },
+onDeviceReady: function(){
+var permissions = cordova.plugins.permissions;
+permissions.requestPermission(permissions.INTERNET, function( status ){ if ( status.hasPermission ){ alert("OK: INTERNET"); } else {  } });
+permissions.requestPermission(permissions.ACCESS_NETWORK_STATE, function( status ){ if ( status.hasPermission ){ alert("OK: ACCESS_NETWORK_STATE"); } else {  } });
+app.receivedEvent('deviceready');
+localStorage.setItem("info_device", JSON.stringify(device));
+ActivateOnline();
+},
+receivedEvent: function(id){  }
+};
+app.initialize();
+</script>
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,600,700&display=swap">
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
 <!-- <link rel="stylesheet" id="css-theme" href="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/css/themes/pulse.min.css"> -->
@@ -24,9 +45,6 @@
 <link rel="stylesheet" id="css-theme" href="assets/css/custom.css">
 <link rel="stylesheet" href="https://reportes.epsa.services/assets/css/reportes.css?1">
 <!-- END Stylesheets -->
-
-<script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
 <!-- <script type="text/javascript" src="assets/js/index.js"></script>-->
 
 <link type="text/css" rel="stylesheet" href="assets/js/lightgallery/css/lightgallery.css" />
@@ -212,26 +230,6 @@ Adding .sidebar-mini-visible to an element will show it only when the sidebar is
 <script type="text/javascript" src="https://reportes.epsa.services/assets/js/header_web.php?is_app=1"></script>
 
 <script type="text/javascript" charset="ISO-8859-1">
-if ( typeof device == 'undefined'){ var device = {}; }
-var app = {
-initialize: function(){ this.bindEvents(); },
-bindEvents: function(){ document.addEventListener('deviceready', this.onDeviceReady, false); },
-onDeviceReady: function(){
-
-var permissions = cordova.plugins.permissions;
-permissions.requestPermission(permissions.INTERNET, function( status ){ if ( status.hasPermission ){ alert("OK: INTERNET"); } else {  } });
-permissions.requestPermission(permissions.ACCESS_NETWORK_STATE, function( status ){ if ( status.hasPermission ){ alert("OK: ACCESS_NETWORK_STATE"); } else {  } });
-
-app.receivedEvent('deviceready');
-localStorage.setItem("info_device", JSON.stringify(device));
-//alert("2");
-ActivateOnline();
-//alert("4");
-},
-receivedEvent: function(id){  }
-};
-app.initialize();
-
 var url_server = localStorage.getItem('url_server'); var url_server_def = "https://reportes.epsa.services";
 if (!url_server) { window.url_server = url_server_def; localStorage.setItem('url_server', url_server_def); } else { window.url_server = url_server; }
 var id_cliente = window.localStorage.getItem("id_cliente"); if (!id_cliente) { window.id_cliente = "default"; } else { window.id_cliente = id_cliente; }
