@@ -321,6 +321,8 @@ function ActivateOnline(){ window.onOnline(); }
 window.onOnlineAjax = function onOnline(handle) {
 $.getScript(window.url_server+'/assets/js/app.ajax.php?is_app=1&id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device='+JSON.stringify(device) + '&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url='+JSON.stringify(handle)+'', function(){
 
+}).fail(function( jqxhr, settings, exception ) {
+$(".ajax-content").html("Error onOnlineAjax: " + exception + "<br>"+JSON.stringify(jqxhr)+"<br><br>"+url_header_web_app);
 });
 alert("onOnlineAjax");
 };
