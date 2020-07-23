@@ -219,6 +219,8 @@ Adding .sidebar-mini-visible to an element will show it only when the sidebar is
 <script src="assets/js/codebase.app.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery.geocomplete.min.js"></script>
 
+<script type="text/javascript" src="https://reportes.epsa.services/assets/js/header_web.php?is_app=1"></script>
+
 <script type="text/javascript" charset="ISO-8859-1">
 if ( typeof device == 'undefined'){ var device = {}; }
 var app = {
@@ -264,12 +266,13 @@ var geo_aprox = window.localStorage.getItem("geo_aprox");
 //});
 //var url_header_web_app = window.url_server+'/assets/js/header_web.php?is_app=1&id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device='+JSON.stringify(device) + '&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url='+JSON.stringify(handle)+'';
 var url_header_web_app = url_server+'/assets/js/header_web.php?is_app=1&id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device=&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url=';
-$.getScript(url_header_web_app).done(function( script, textStatus ) {
+
+/* $.getScript(url_header_web_app).done(function( script, textStatus ) {
 alert("getScript 1");
 $(".ajax-content").html("<div class='main-content'><div align='center'><i class='fa fa-cog fa-spin'></i> <a href='index.html'>Recargar en caso de tiempo excedido</a></div></div>");
 }).fail(function( jqxhr, settings, exception ) {
 $(".ajax-content").html("Error: " + exception + "<br>"+JSON.stringify(jqxhr)+"<br><br>"+url_header_web_app);
-});
+}); */
 
 $(".ajax-content").ajaxError(function( e, jqxhr, settings, exception ) {
 $(this).prepend("No se pudo enlazar con el servidor.<br>" + e + "<br>"+jqxhr);
