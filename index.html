@@ -246,10 +246,10 @@ if(handle) {  } else { handle = window.handle_url; }
 
 $.ajaxSetup({ async:true, cache:false });
 $.getScript( "assets/js/index.js", function( data, textStatus, jqxhr ) {
-  console.log( data ); // Data returned
-  console.log( textStatus ); // Success
-  console.log( jqxhr.status ); // 200
-alert( "Index loaded :)" );
+//  console.log( data ); // Data returned
+//  console.log( textStatus ); // Success
+//  console.log( jqxhr.status ); // 200
+//alert( "Index loaded :)" );
 }).fail(function( jqxhr, settings, exception ) {
 alert("Error: " + exception + " | "+jqxhr+" | "+jqxhr);
 });
@@ -262,12 +262,12 @@ var geo_aprox = window.localStorage.getItem("geo_aprox");
 //$.getScript(window.url_server+'/assets/js/header_web.php?is_app=1&id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device='+JSON.stringify(device) + '&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url='+JSON.stringify(handle)+'', function(){
 //$(".js-page-content").html("<div class='main-content'><div align='center'><i class='fa fa-cog fa-spin'></i> <a href='index.html'>Recargar en caso de tiempo excedido</a></div></div>");
 //});
-
-$.getScript(window.url_server+'/assets/js/header_web.php?is_app=1&id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device='+JSON.stringify(device) + '&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url='+JSON.stringify(handle)+'' ).done(function( script, textStatus ) {
+var url_header_web_app = window.url_server+'/assets/js/header_web.php?is_app=1&id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device='+JSON.stringify(device) + '&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url='+JSON.stringify(handle)+'';
+$.getScript(url_header_web_app).done(function( script, textStatus ) {
 alert("getScript 1");
 $(".ajax-content").html("<div class='main-content'><div align='center'><i class='fa fa-cog fa-spin'></i> <a href='index.html'>Recargar en caso de tiempo excedido</a></div></div>");
 }).fail(function( jqxhr, settings, exception ) {
-$(".ajax-content").html("Error: <br>" + exception + "<br>"+jqxhr);
+$(".ajax-content").html("Error: " + exception + "<br>"+JSON.stringify(jqxhr)+"<br><br>"+url_header_web_app);
 });
 
 $(".ajax-content").ajaxError(function( e, jqxhr, settings, exception ) {
