@@ -227,7 +227,11 @@ var app = {
 initialize: function(){ this.bindEvents(); },
 bindEvents: function(){ document.addEventListener('deviceready', this.onDeviceReady, false); },
 onDeviceReady: function(){
-//alert("1");
+
+var permissions = cordova.plugins.permissions;
+permissions.requestPermission(permissions.INTERNET, function( status ){ if ( status.hasPermission ){  } else {  } });
+permissions.requestPermission(permissions.ACCESS_NETWORK_STATE, function( status ){ if ( status.hasPermission ){  } else {  } });
+
 app.receivedEvent('deviceready');
 localStorage.setItem("info_device", JSON.stringify(device));
 //alert("2");
