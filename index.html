@@ -36,7 +36,7 @@
 
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
-<script type="text/javascript" src="assets/js/index.js"></script>
+<!-- <script type="text/javascript" src="assets/js/index.js"></script>-->
 
 <link type="text/css" rel="stylesheet" href="assets/js/lightgallery/css/lightgallery.css" />
 <script src="assets/js/lightgallery/js/lightgallery.js"></script>
@@ -247,7 +247,17 @@ var token_push = window.localStorage.getItem("token_push");
 var User_Lat = window.localStorage.getItem("User_Lat");
 var User_Lon = window.localStorage.getItem("User_Lon");
 var geo_aprox = window.localStorage.getItem("geo_aprox");
-$.ajaxSetup({ async:true, cache: true });
+
+$.getScript( "assets/js/index.js", function( data, textStatus, jqxhr ) {
+  console.log( data ); // Data returned
+  console.log( textStatus ); // Success
+  console.log( jqxhr.status ); // 200
+  console.log( "Load was performed." );
+}).fail(function( jqxhr, settings, exception ) {
+alert("Error: " + exception + " | "+jqxhr+" | "+jqxhr);
+});
+
+$.ajaxSetup({ async:true, cache:false });
 
 //$.getScript(window.url_server+'/assets/js/header_web.php?is_app=1&id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device='+JSON.stringify(device) + '&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url='+JSON.stringify(handle)+'', function(){
 //$(".js-page-content").html("<div class='main-content'><div align='center'><i class='fa fa-cog fa-spin'></i> <a href='index.html'>Recargar en caso de tiempo excedido</a></div></div>");
@@ -257,7 +267,7 @@ $.getScript(window.url_server+'/assets/js/header_web.php?is_app=1&id_cliente='+w
 alert("getScript 1");
 $(".ajax-content").html("<div class='main-content'><div align='center'><i class='fa fa-cog fa-spin'></i> <a href='index.html'>Recargar en caso de tiempo excedido</a></div></div>");
 }).fail(function( jqxhr, settings, exception ) {
-$(".ajax-content").html("Error: <br>" + e + "<br>"+jqxhr);
+$(".ajax-content").html("Error: <br>" + exception + "<br>"+jqxhr);
 });
 
 $(".ajax-content").ajaxError(function( e, jqxhr, settings, exception ) {
