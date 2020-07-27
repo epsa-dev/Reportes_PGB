@@ -226,8 +226,7 @@ Adding .sidebar-mini-visible to an element will show it only when the sidebar is
 <script src="assets/js/codebase.core.min.js"></script>
 <script src="assets/js/codebase.app.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery.geocomplete.min.js"></script>
-
-<script type="text/javascript" src="https://reportes.epsa.services/assets/js/header_web.php?is_app=1"></script>
+<!-- <script type="text/javascript" src="https://reportes.epsa.services/assets/js/header_web.php?is_app=1"></script> -->
 
 <script type="text/javascript" charset="ISO-8859-1">
 var url_server = localStorage.getItem('url_server'); var url_server_def = "https://reportes.epsa.services";
@@ -253,11 +252,13 @@ var User_Lat = window.localStorage.getItem("User_Lat");
 var User_Lon = window.localStorage.getItem("User_Lon");
 var geo_aprox = window.localStorage.getItem("geo_aprox");
 
+
+
 //$.getScript(window.url_server+'/assets/js/header_web.php?is_app=1&id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device='+JSON.stringify(device) + '&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url='+JSON.stringify(handle)+'', function(){
 //$(".js-page-content").html("<div class='main-content'><div align='center'><i class='fa fa-cog fa-spin'></i> <a href='index.html'>Recargar en caso de tiempo excedido</a></div></div>");
 //});
 //var url_header_web_app = window.url_server+'/assets/js/header_web.php?is_app=1&id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device='+JSON.stringify(device) + '&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url='+JSON.stringify(handle)+'';
-var url_header_web_app = url_server+'/assets/js/header_web.php?is_app=1&id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device=&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url=';
+var header_web_app_url = url_server+'/assets/js/header_web.php?is_app=1&id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device=&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url=';
 
 /* $.getScript(url_header_web_app).done(function( script, textStatus ) {
 alert("getScript 1");
@@ -265,6 +266,11 @@ $(".ajax-content").html("<div class='main-content'><div align='center'><i class=
 }).fail(function( jqxhr, settings, exception ) {
 $(".ajax-content").html("Error: " + exception + "<br>"+JSON.stringify(jqxhr)+"<br><br>"+url_header_web_app);
 }); */
+
+var header_web_app = function(){
+$(".ajax-content").html("<div class='main-content'><div align='center'><i class='fa fa-cog fa-spin'></i> <a href='index.html'>Recargar en caso de tiempo excedido</a></div></div>");
+};
+loadScript(header_web_app_url, header_web_app);
 
 $(".ajax-content").ajaxError(function( e, jqxhr, settings, exception ) {
 $(this).prepend("No se pudo enlazar con el servidor.<br>" + e + "<br>"+jqxhr);
@@ -309,14 +315,15 @@ function ActivateOnline(){ window.onOnline(); }
 <script src="assets/js/core/js.cookie.min.js"></script>
 <script src="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/pages/be_ui_icons.min.js"></script>
 <script src="https://cdn.myhostmx.com/file/themes-assets/codebase/assets_3.4/js/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/app.ajax.js"></script>
 <script>
 window.onOnlineAjax = function onOnline(handle) {
+/*
 $.getScript(window.url_server+'/assets/js/app.ajax.php?is_app=1&id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device='+JSON.stringify(device) + '&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url='+JSON.stringify(handle)+'', function(){
-
 }).fail(function( jqxhr, settings, exception ) {
 $(".ajax-content").html("Error onOnlineAjax: " + exception + "<br>"+JSON.stringify(jqxhr)+"<br><br>"+url_header_web_app);
-});
-alert("onOnlineAjax");
+}); */
+//alert("onOnlineAjax");
 };
 </script>
 
