@@ -201,7 +201,7 @@ Adding .sidebar-mini-visible to an element will show it only when the sidebar is
 </div>
 </div>
 
-<div class="content_ content-full_ ajax-content js-page-content" id="js-page-content"><p style="text-align:center">Un momento por favor...</p></div>
+<div class="content_ content-full_ ajax-content js-page-content" id="js-page-content"><p style="text-align:center"><div align='center'><i class='fa fa-cog fa-spin'></i> <a href='index.html'>Recargar en caso de tiempo excedido</a></div></p></div>
 
 <div class="check_internet alert alert-danger" style="display: none;">
 <p>Se perdi&oacute; la conexi&oacute;n de Internet, es posible que sus peticiones no lleguen al servidor, espere un momento y reintente nuevamente :(</p>
@@ -263,7 +263,7 @@ $(".ajax-content").html("<div class='main-content'><div align='center'><i class=
 $(".ajax-content").html("Error: " + exception + "<br>"+JSON.stringify(jqxhr)+"<br><br>"+url_header_web_app);
 }); */
 
-$(".ajax-content").html("<div class='main-content'><div align='center'><i class='fa fa-cog fa-spin'></i> <a href='index.html'>Recargar en caso de tiempo excedido</a></div></div>");
+//$(".ajax-content").html("<div class='main-content'><div align='center'><i class='fa fa-cog fa-spin'></i> <a href='index.html'>Recargar en caso de tiempo excedido</a></div></div>");
 var header_web_app = function(){  };
 loadScript(header_web_app_url, header_web_app);
 
