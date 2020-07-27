@@ -233,8 +233,6 @@ var url_server = localStorage.getItem('url_server'); var url_server_def = "https
 if (!url_server) { window.url_server = url_server_def; localStorage.setItem('url_server', url_server_def); } else { window.url_server = url_server; }
 var id_cliente = window.localStorage.getItem("id_cliente"); if (!id_cliente) { window.id_cliente = "default"; } else { window.id_cliente = id_cliente; }
 
-jQuery(document).ready(function($){ });
-
 //var device = {};
 window.onOnline = function onOnline(handle) {
 alert("onOnline");
@@ -267,6 +265,8 @@ $(".ajax-content").html("<div class='main-content'><div align='center'><i class=
 $(".ajax-content").html("Error: " + exception + "<br>"+JSON.stringify(jqxhr)+"<br><br>"+url_header_web_app);
 }); */
 
+jQuery(document).ready(function($){
+
 var header_web_app = function(){
 $(".ajax-content").html("<div class='main-content'><div align='center'><i class='fa fa-cog fa-spin'></i> <a href='index.html'>Recargar en caso de tiempo excedido</a></div></div>");
 };
@@ -274,6 +274,8 @@ loadScript(header_web_app_url, header_web_app);
 
 $(".ajax-content").ajaxError(function( e, jqxhr, settings, exception ) {
 $(this).prepend("No se pudo enlazar con el servidor.<br>" + e + "<br>"+jqxhr);
+});
+
 });
 
 onOnlineAjax();
