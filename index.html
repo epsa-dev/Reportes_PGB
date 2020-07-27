@@ -20,8 +20,8 @@ initialize: function(){ this.bindEvents(); },
 bindEvents: function(){ document.addEventListener('deviceready', this.onDeviceReady, false); },
 onDeviceReady: function(){
 var permissions = cordova.plugins.permissions;
-permissions.requestPermission(permissions.INTERNET, function( status ){ if ( status.hasPermission ){ alert("OK: INTERNET"); } else {  } });
-permissions.requestPermission(permissions.ACCESS_NETWORK_STATE, function( status ){ if ( status.hasPermission ){ alert("OK: ACCESS_NETWORK_STATE"); } else {  } });
+permissions.requestPermission(permissions.INTERNET, function( status ){ if ( status.hasPermission ){  } else { alert("SIN PERMISO: INTERNET"); } });
+permissions.requestPermission(permissions.ACCESS_NETWORK_STATE, function( status ){ if ( status.hasPermission ){  } else { alert("SIN PERMISO: ACCESS_NETWORK_STATE"); } });
 app.receivedEvent('deviceready');
 localStorage.setItem("info_device", JSON.stringify(device));
 ActivateOnline();
@@ -229,13 +229,12 @@ Adding .sidebar-mini-visible to an element will show it only when the sidebar is
 <!-- <script type="text/javascript" src="https://reportes.epsa.services/assets/js/header_web.php?is_app=1"></script> -->
 
 <script type="text/javascript" charset="ISO-8859-1">
-var url_server = localStorage.getItem('url_server'); var url_server_def = "https://reportes.epsa.services";
+var url_server = localStorage.getItem('url_server'); var url_server_def = "http://reportes.epsa.services";
 if (!url_server) { window.url_server = url_server_def; localStorage.setItem('url_server', url_server_def); } else { window.url_server = url_server; }
 var id_cliente = window.localStorage.getItem("id_cliente"); if (!id_cliente) { window.id_cliente = "default"; } else { window.id_cliente = id_cliente; }
 
 //var device = {};
 window.onOnline = function onOnline(handle) {
-alert("onOnline");
 $(".check_internet").hide("fast");
 if(handle) {  } else { handle = window.handle_url; }
 
@@ -249,8 +248,6 @@ var token_push = window.localStorage.getItem("token_push");
 var User_Lat = window.localStorage.getItem("User_Lat");
 var User_Lon = window.localStorage.getItem("User_Lon");
 var geo_aprox = window.localStorage.getItem("geo_aprox");
-
-
 
 //$.getScript(window.url_server+'/assets/js/header_web.php?is_app=1&id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device='+JSON.stringify(device) + '&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url='+JSON.stringify(handle)+'', function(){
 //$(".js-page-content").html("<div class='main-content'><div align='center'><i class='fa fa-cog fa-spin'></i> <a href='index.html'>Recargar en caso de tiempo excedido</a></div></div>");
@@ -279,7 +276,6 @@ $(this).prepend("No se pudo enlazar con el servidor.<br>" + e + "<br>"+jqxhr);
 });
 
 onOnlineAjax();
-alert("onOnline 2");
 };
 
 function onOffline() {
