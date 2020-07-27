@@ -743,7 +743,7 @@ function checkURL() {
  */
 function loadURL(url, container) {
 
-if (url == "undefined" || url == null || url == "") { url = window.url_server+"/_/index?is_app="+is_app; } else { url = window.url_server+"/_/" + url; }
+if (url == "undefined" || url == null || url == "") { url = window.url_server+"/secciones/index.php?is_app="+is_app; } else { url = window.url_server+"/_/" + url; }
 
 	// debugState
 	console.log("URL: " + url);
