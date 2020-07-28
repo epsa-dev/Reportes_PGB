@@ -127,7 +127,8 @@
 </platform>
 
 <gap:config-file platform="ios" parent="CFBundleShortVersionString"><string>100</string></gap:config-file>
-<!-- <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+<!--  -->
+<edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
 <string>Permitir solo para grabar el reporte</string>
 </edit-config>
 <edit-config target="NSMicrophoneUsageDescription" file="*-Info.plist" mode="merge">
@@ -141,7 +142,7 @@
 </edit-config>
 <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
 <string>Permitir solo para guardar el video</string>
-</edit-config> -->
+</edit-config>
 
 <access origin="*"/>
 <plugin name="cordova-plugin-whitelist" />
