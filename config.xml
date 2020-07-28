@@ -144,8 +144,8 @@
 <string>Permitir solo para guardar el video</string>
 </edit-config>
 
-<access origin="*"/>
 <plugin name="cordova-plugin-whitelist" />
+<access origin="*"/>
 <allow-navigation href="*" />
 <allow-intent href="http://*/*" />
 <allow-intent href="https://*/*" />
