@@ -126,8 +126,8 @@
 <splash src="res/screen/ios/Default@2x~ipad~comany.png"/>
 </platform>
 
-<gap:config-file platform="ios" parent="CFBundleShortVersionString"><string>100</string></gap:config-file>
 <!--
+<gap:config-file platform="ios" parent="CFBundleShortVersionString"><string>100</string></gap:config-file>
 <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
 <string>Permitir solo para grabar el reporte</string>
 </edit-config>
@@ -144,8 +144,8 @@
 <string>Permitir solo para guardar el video</string>
 </edit-config> -->
 
-<!-- <plugin name="cordova-plugin-whitelist" /> -->
 <access origin="*"/>
+<plugin name="cordova-plugin-whitelist" version="1" />
 <allow-navigation href="*" />
 <allow-intent href="http://*/*" />
 <allow-intent href="https://*/*" />
