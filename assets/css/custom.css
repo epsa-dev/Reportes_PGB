@@ -7,7 +7,7 @@
 
 select.form-control_bad:not([size]):not([multiple]) { height: 34px; }
 
-#page-container.page-header-inverse #page-header { color: #292f72; background-color: #FFFFFF; }
+#page-container.page-header-inverse #page-header { color: #FFFFFF; background-color: #002851; }
 
 a .text-title_app { color: #292f72 !important; font-size: 2.0rem!important; }
 
@@ -21,7 +21,11 @@ a .text-title_app { color: #292f72 !important; font-size: 2.0rem!important; }
 
 .block-content_il .block-content { padding: 10px 10px 10px 10px; }
 
-.select2-container--default .select2-selection--multiple .select2-selection__choice { height: 22px; line-height: 22px; color: #000 !important; }
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+height: 22px;
+line-height: 22px;
+color: #000 !important;
+}
 
 .select2-container .select2-selection--single { height: 34px !important; }
 .select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -36,4 +40,7 @@ color: #444; line-height: 33px !important; }
 .table_center { text-align: center }
 .table_center th { text-align: center }
 .table_center td { text-align: center }
+
+.app_block_title { color:#002851; font-size: 1.5em; font-weight: bold; }
+.btn-dual-secondary { color: #ffffff; background-color: transparent; border-color: transparent; }
 
