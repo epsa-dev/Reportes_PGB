@@ -53,7 +53,7 @@
 <plugin name="cordova-plugin-vibration"/>
 <plugin name="cordova-plugin-android-permissions"/>
 <plugin name="cordova-plugin-imei"/>
-<plugin name="hazems-cordova-plugin-sms"/>
+<!-- <plugin name="hazems-cordova-plugin-sms"/> -->
 
 <plugin name="cordova-plugin-geolocation"><variable name="GEOLOCATION_USAGE_DESCRIPTION" value="Posicionamiento en el Mapa" /></plugin>
 
@@ -75,7 +75,7 @@
 <variable name="FACEID_USAGE_DESCRIPTION" value="Ingresar con Huella Digital" />
 </plugin>
 
-<plugin name="cordova-plugin-sqlite-2" />
+<!-- <plugin name="cordova-plugin-sqlite-2" /> -->
 
 <icon src="icon.png" />
 
